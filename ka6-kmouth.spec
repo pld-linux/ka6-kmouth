@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.3
+%define		kdeappsver	24.12.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kmouth
 Summary:	kmouth
 Name:		ka6-%{kaname}
-Version:	24.08.3
+Version:	24.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	c1e9c2fb5ccf0a917b4fcacbdb984888
+# Source0-md5:	d0d77a8dfdce7c405dc1907de54f3c79
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -86,6 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.kmouth.desktop
 %{_iconsdir}/hicolor/*x*/actions/*.png
 %{_iconsdir}/hicolor/*x*/apps/*.png
+%{_iconsdir}/hicolor/scalable/apps/kmouth.svg
 %{_datadir}/kmouth
 %{_datadir}/metainfo/org.kde.kmouth.appdata.xml
 %lang(ca) %{_mandir}/ca/man1/kmouth.1*
